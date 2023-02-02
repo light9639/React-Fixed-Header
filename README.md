@@ -1,4 +1,4 @@
-# :zap: React-Fixed-Header 연습 페이지입니다.
+# 📌 React-Fixed-Header 연습 페이지입니다.
 :octocat: https://light9639.github.io/React-Fixed-Header/
 
 <left><img src="https://user-images.githubusercontent.com/95972251/216318923-3405dc47-2bed-4c3a-8929-4fe10a1adf8b.png" alt="Img" width="400px" /></left>
