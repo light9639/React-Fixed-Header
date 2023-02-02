@@ -3,7 +3,7 @@
 
 
 
-:sparkles: React-Fixed-Header 연습 페이지입니다. :sparkles:
+:sparkles: React의 `useRef`, `useState`, `useEffect` hooks를 이용하여 스크롤을 내릴 시 Header 고정되도록 만든 페이지입니다. :sparkles:
 ## :tada: React 생성
 - React 생성
 ```bash
@@ -53,8 +53,10 @@ export default defineConfig({
 yarn add vite-tsconfig-paths @types/node
 ```
 
-## ✒️ App.tsx 수정 및 작성
+## ✒️ App.tsx, App.css 수정 및 작성
+- App.tsx를 다음과 같이 수정한다.
 ### :zap: App.tsx
+- 
 ```bash
 import { useRef, useState, useEffect } from "react";
 import reactLogo from './assets/react.svg'
@@ -137,6 +139,54 @@ export default function App(): JSX.Element {
       </div>
     </div>
   );
+}
+```
+
+### :zap: App.css
+- `App.css`에 box 클래스에 스타일 추가.
+```bash
+.box {
+  position: relative;
+  top: 30px;
+  right: 30px;
+  width: 400px;
+  height: 400px;
+  background: #fff;
+  overflow: hidden;
+  margin-left: 100px;
+
+}
+
+.box .boxInner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 10px;
+}
+
+.smallBox {
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  z-index: 1;
+  padding: 10px;
+  background: #111;
+  border-radius: 6px;
+  color: #fff;
+  border: 1px solid #222;
+  text-align: left;
+  font-size: 12px;
+}
+
+.smallBox.fixed {
+  width: 100%;
+  top: 0;
+  right: 0;
+  border-radius: 0;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
 }
 ```
 

@@ -28,6 +28,7 @@ export default function App(): JSX.Element {
 
   return (
     <div className="App">
+      <h1>📌 Fixed React</h1>
       <div className="box">
         <div className={ScrollActive ? "smallBox fixed" : "smallBox"}>
           {ScrollActive ? "📌 Header가 고정되었습니다." : "스크롤을 움직이면 고정됩니다. 😁"}

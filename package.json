@@ -12,9 +12,11 @@
   },
   "homepage": "http://light9639.github.io/React-Fixed-Header",
   "dependencies": {
+    "@types/node": "^18.11.18",
     "gh-pages": "^5.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-tsconfig-paths": "^4.0.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
