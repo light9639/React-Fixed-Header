@@ -1,7 +1,7 @@
 # :zap: React-Fixed-Header 연습 페이지입니다.
 :octocat: https://light9639.github.io/React-Fixed-Header/
 
-
+<left><img src="https://user-images.githubusercontent.com/95972251/216318923-3405dc47-2bed-4c3a-8929-4fe10a1adf8b.png" alt="Img" width="400px" /></left>
 
 :sparkles: React의 `useRef`, `useState`, `useEffect` hooks를 이용하여 스크롤을 내릴 시 Header 고정되도록 만든 페이지입니다. :sparkles:
 ## :tada: React 생성
@@ -54,9 +54,8 @@ yarn add vite-tsconfig-paths @types/node
 ```
 
 ## ✒️ App.tsx, App.css 수정 및 작성
-- App.tsx를 다음과 같이 수정한다.
 ### :zap: App.tsx
-- 
+- App.tsx를 다음과 같이 수정한다.
 ```bash
 import { useRef, useState, useEffect } from "react";
 import reactLogo from './assets/react.svg'
@@ -191,7 +190,9 @@ export default function App(): JSX.Element {
 ```
 
 ## :test_tube: 스크롤 내릴 시 Header 고정
-<img src="" alt="Img" width="450px" />
+- 스크롤을 내리게 되면 헤더가 고정됩니다.
+
+<left><img src="https://user-images.githubusercontent.com/95972251/216320180-a91833ab-86fe-4aed-afc0-818454711966.png" alt="Img" width="400px" /></left>
 
 ## :tada: 프로젝트 배포.
 - 프로젝트를 전부 작성하였으면 `gh-pages` 라이브러리를 통해 배포를 쉽게 할 수 있다. 먼저 `gh-pages`를 설치한다.
