@@ -3,7 +3,7 @@
 
 <left><img src="https://user-images.githubusercontent.com/95972251/216318923-3405dc47-2bed-4c3a-8929-4fe10a1adf8b.png" alt="Img" width="400px" /></left>
 
-:sparkles: React의 `useRef`, `useState`, `useEffect` hooks를 이용하여 스크롤을 내릴 시 Header 고정되도록 만든 페이지입니다. :sparkles:
+:sparkles: React의 `useRef`, `useState`, `useEffect` hooks를 이용하여 스크롤을 내릴 시 Header가 고정되도록 만든 페이지입니다. :sparkles:
 ## :tada: React 생성
 - React 생성
 ```bash
@@ -21,7 +21,7 @@ yarn create vite
 - 터미널에서 실행 후 프로젝트 이름 만든 후 `React` 선택, `Typescirpt` or `Typescirpt - SWC` 선택하면 생성 완료.
 ## :memo: vite.config.ts 수정.
 - `build`시 이미지, CSS. js 파일을 각각 다른 파일에 저장하고 경로를 `./`로 하기 위해 다음과 같이 설정한다.
-```bash
+```js
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
 import tsconfigPaths from 'vite-tsconfig-paths';
@@ -56,7 +56,10 @@ yarn add vite-tsconfig-paths @types/node
 ## ✒️ App.tsx, App.css 수정 및 작성
 ### :zap: App.tsx
 - App.tsx를 다음과 같이 수정한다.
-```bash
+- **useRef** 사용 시 `React.MutableRefObject<HTMLDivElement>`를 타입으로 지정한다.
+- `setScrollActive`는 `scrollTop`의 값이 30이상이면 스크롤이 작동하고 30 이하면 작동하지 않도록 한다.
+- **useEffect**를 통해 `watchScroll`이 작동되도록 한다.
+```js
 import { useRef, useState, useEffect } from "react";
 import reactLogo from './assets/react.svg'
 import './App.css'
@@ -143,7 +146,7 @@ export default function App(): JSX.Element {
 
 ### :zap: App.css
 - `App.css`에 box 클래스에 스타일 추가.
-```bash
+```css
 .box {
   position: relative;
   top: 30px;
@@ -200,8 +203,8 @@ export default function App(): JSX.Element {
 yarn add gh-pages
 ```
 
-- 설치 이후 `package.json`을 `scripts` 부분을 수정하고 `homepage` 부분에 배포 경로를 적으면 된다.
-```bash
+- 설치 이후 **package.json**의 **scripts** 부분을 수정하고 **homepage** 부분에 배포 경로를 적으면 된다.
+```js
 "scripts": {
   "predeploy": "yarn build",
   "deploy": "gh-pages -d dist"
@@ -209,4 +212,4 @@ yarn add gh-pages
 "homepage": "http://light9639.github.io/React-Fixed-Header",
 ```
 
-- `package.json` 수정이 완료되면 'yarn deploy'를 실행하면 `gh-pages` 브랜치로 빌드된 파일이 업로드 되어 배포가 완료된다.
+- **package.json** 수정이 완료되면 **yarn deploy**를 실행하면 **gh-pages** 브랜치로 빌드된 파일이 업로드 되어 배포가 완료된다.
